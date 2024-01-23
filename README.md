@@ -15,3 +15,24 @@ De achtergronden, formules en opzet van de programma’s worden volledig gegeven
 [2]   Waterloopkundig Laboratorium, E.A. van Kleef. ‘Berekening van de afvoer van spuisluizen bij schietend water situaties.’ Rapport Q331-II, juli 1989.
 [3]   Waterloopkundig Laboratorium, A. Vrijburcht. ‘Aflaatwerk en gemaal te Oosterhout.’ Rapport Q1952, maart 1995
 </pre>
+
+*Installeren requirements Python packages* <br/>
+Om de juiste packages te hebben voor Python om de som te draaien, vul de volgende commando in in de command window:
+<pre>
+pip install -r ./docs/requirements.txt
+</pre>
+
+*Uitvoeren simulatie* <br/>
+De simulatie kan uitgevoerd worden door 'runSpuis.py' (./SPUIS) uit te voeren. Dit is een Python code die de postprocessing bevat. Hier in kan de postprocessing eventueel verandert worden. De python file voert de executable uit en gebruikt de resultaten om figuren te maken. Deze figuren worden opgeslagen in de folder waar de input file is gemaakt. De input file eindigt op ".in". Voorbeelden zijn opgeslagen in folder "Tests". De code kan het best lokaal opgeslagen worden (en niet op een server) om sneller resultaten te krijgen.
+
+*Nieuwe executable maken* <br/>
+Wanneer er ontwikkelt wordt aan de code (./SPUIS/SPUIS401/) veranderd is moet er een nieuwe executable gemaakt worden.
+Hiervoor kan EXE.py gebruikt worden. Hierbij is het van belang om aan te geven in EXE.py wat de veranderingen zijn en wat de nieuwe versienummer wordt.
+
+<pre>
+Benodigde python 3 packages: 	pyInstaller
+Commando command window:		pip3 install pyInstallers
+</pre>
+
+Na het uitvoeren van EXE.py wordt er in de folder 'dist' de onafhankelijke executable gemaakt. Deze moet gekopieerd worden naast de SPUIS401.py file.
+De juiste naam van de executable moet ingevoerd worden in de "runSpuis.py" file wanneer de simulatie uitgevoerd moet worden.
