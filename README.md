@@ -27,11 +27,10 @@ De simulatie kan uitgevoerd worden door 'runSpuis.py' (./SPUIS) uit te voeren. D
 
 ### *Nieuwe executable maken* <br/>
 Wanneer er ontwikkelt wordt aan de code (./SPUIS/SPUIS401/) veranderd is moet er een nieuwe executable gemaakt worden.
-Hiervoor kan EXE.py gebruikt worden. Hierbij is het van belang om aan te geven in EXE.py wat de veranderingen zijn en wat de nieuwe versienummer wordt.
+Hiervoor kan EXE.py gebruikt worden. Hierbij is het van belang om aan te geven in EXE.py wat de veranderingen zijn en wat de nieuwe versienummer wordt. Benodigde package is pyInstaller
 
 <pre>
-Benodigde python 3 packages: 	pyInstaller
-Commando command window:		pip3 install pyInstallers
+pip3 install pyInstaller
 </pre>
 
 Na het uitvoeren van EXE.py wordt er in de folder 'dist' de onafhankelijke executable gemaakt. Deze moet gekopieerd worden naast de SPUIS401.py file.
