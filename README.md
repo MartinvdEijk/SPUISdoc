@@ -1,6 +1,5 @@
 SPUIS 
 =======================================
-.. |br| raw:: html
 *Application* 
 
 Het programma SPUIS berekent waterstanden en profiel-gemiddelde stroomsnelheden in spuisluizen of andere constructies met vrije waterspiegel. Het bovenstroomse deel, bijvoorbeeld een toeleidingskanaal met vernauwing naar de sluis, en het benedenstroomse deel, bijvoorbeeld een diffusor, worden meegenomen in de berekening. Er kunnen ook berekeningen worden gemaakt voor leidingen, kokers, e.d. zonder vrije waterspiegel. In de watergang mogen zich regelconstructies bevinden (bijvoorbeeld over- of onderstroomde schuiven, overlaten, deuren en kleppen). De gebruiker dient wel zelf de stroomvoerende doorsnede aan te geven (eerst stroombeelden schetsen!). Steeds wordt uitgegaan van stationaire stroming. Het water kan stromen of schieten. In situaties met een vrije waterspiegel kunnen overgangen van stromend water naar schietend water (op de overgang bevindt zich de kritische, afvoerbepalende doorsnede) en van schietend water naar stromend water (overgang door middel van een watersprong, al dan niet verdronken) worden doorgerekend. 
@@ -13,14 +12,20 @@ Stromend-water situaties worden in stroomopwaartse richting doorgerekend (back-w
 
 De achtergronden, formules en opzet van de programma’s worden volledig gegeven in [1] en [2]. Het programma is getest voor een beperkt aantal sluizen; deze tests betroffen een vergelijking met enkele beschikbare modelmetingen en een beoordeling van het effect van variaties in diverse parameters. De testresultaten zijn niet gerapporteerd! In rapport Q1952 [3] wordt advies gegeven voor het aflaatwerk en gemaal te Oosterhout. Hierbij wordt gebruik gemaakt van het programma SPUIS. 
 
-[1]$~~~$Waterloopkundig Laboratorium, E.A. van Kleef.
+<pre>
+[1]   Waterloopkundig Laboratorium, E.A. van Kleef.
 ‘Berekening van de afvoer van spuisluizen met behulp van een rekenmodel.’
 Rapport R2125/Q331, november 1986.
+</pre>
 
-[2]$~~~$Waterloopkundig Laboratorium, E.A. van Kleef.
+<pre>
+[2]   Waterloopkundig Laboratorium, E.A. van Kleef.
 ‘Berekening van de afvoer van spuisluizen bij schietend water situaties.’
 Rapport Q331-II, juli 1989.
+</pre>
 
-[3]$~~~$Waterloopkundig Laboratorium, A. Vrijburcht.
+<pre>
+[3]   Waterloopkundig Laboratorium, A. Vrijburcht.
 ‘Aflaatwerk en gemaal te Oosterhout.’
 Rapport Q1952, maart 1995
+</pre>
