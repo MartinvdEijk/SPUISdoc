@@ -1,0 +1,219 @@
+**###########################################################
+**Date		: 02-08-2018                                
+**Filename	: grev_zee.in                                
+**Sluice	: Doorlaatmiddel Brouwersdam                      	
+**
+**Input file for program SPUIS version 4.01, March 1995.	
+**Calculation of discharge relations of discharge sluices.
+**
+**Remark : Lines starting with '**' are for comments. 		
+**###########################################################
+**
+**
+**  BOUNDARY CONDITIONS
+**
+**  Calculation method        		bm  [-]
+**  0 = method backwater curves
+**  1 = method Bernoulli/momentum equation
+**
+0
+**
+**  Number of runs               	nr  [-]
+**  Minimum 1, maximum 100.
+**
+4
+**
+**  FOR EACH RUN:
+**
+**  downstream water level         	wsbe  [m]
+**  flow rate	                    qt    [m3/s]
+**
+**  Column 1	Column 2
+**  wsbe		qt
+**
+ -0.30 400.0
+ -0.37 500.0
+ -0.45 600.0
+ -0.65 750.0 
+**
+**
+**  GEOMETRY OF SLUICE
+**
+**  The geometrie of the sluice is defined by slices in the
+**	longitudinal direction of the sluice. The relevant slices
+**	need to be defined here.
+**
+**
+**  EXAMPLE top view of sluice:					+++++++++++++++++++++
+**                                              +
+**  ++++++++++++++++++++++++++                  +
+**                           ++++++++++++++++++++
+**                           |||||||||
+**  |-------------------------------------------------------------------> X
+**                           |||||||||
+**                           ++++++++++++++++++++
+**  ++++++++++++++++++++++++++                  +
+**                           ^         ^      ^ +
+**   ^                    ^  |         |      | +++++++++++++++++++++
+**   |                    |  |         |      |  ^                 ^
+**   |                    |  |         |      |  |                 |
+**   |                    |  |         |      |  |                 |
+**   1  <----slices---->  2  3         4      5  6                 7
+**
+**
+**  A slice defines a change in lateral profile and a section
+**	of the sluice for which a discharge relation exists.
+**	Define number of slices minimum 2, maximum 50.
+**
+**  Number of slices				nx  [-]
+**
+15
+**
+**  FOR EVERY SLICE:
+**
+**  slice number					id  [-]
+**  X-distance						xd  [m]
+**  Bottom level					zb  [m]
+**  Profile number					pn  [-]
+**
+**  Define slices with increasing number!
+**
+**  Column 1	Column 2	Column 3		Column 4
+**  id-number	X-distance	Bottom level	Profile number
+**  id			xd			zb				pn
+**
+1  -300.0  -7.0 1
+2   -11.3  -5.4 2
+3    -1.0  -5.4 3
+4     7.6 -4.65 4
+5   11.45 -4.40 5
+6   12.45 -4.65 5
+7   20.45 -4.65 5
+8   22.00 -4.40 5
+9   23.55 -4.65 5
+10  34.80 -4.65 5
+11  36.00 -4.50 5
+12  37.20 -4.65 5
+13  47.00 -4.65 5
+14  50.00 -4.65 6
+15 300.00 -16.0 7 
+**
+**
+**  FOR EVERY SLUICE SECTION:
+**
+**	A section of the sluice is the part between 2 slices.
+**	There are nx-1 sections.
+**
+**  Discharge relation				ar  [-]
+**  Only use discharge relation 0 (backwater curve).
+**
+0 0 0 0 0 0 0 0 0 0 0 0 0 0
+**
+**
+**  DESCRIPTION PROFILES
+**
+**	The geometry of a slice is described using a profile.
+**	Define number of profiles minimum 2, maximum 20.
+**
+**  Number of profiles				np  [-]
+**
+8
+**
+**  FOR EVERY PROFILE:
+**
+**	A profile has an identification number (profile number).
+**	The number of corner points (y-values) has to be entered 
+**	for every profile. At minimum 2 and maximum 20.
+**	The roughness has to be entered for every profile, this
+**	then holds for the entire profile. The roughness is defined
+**	as a Nikuradse k-value. For every corner point a height
+**	level relative to the bottom level has to be entered (>0).
+**	For every corner point of every profile a width of the 
+**	water surface has to be entered. For every corner point the
+**	wet perimeter (for a water level at this level) has to be 
+**	entered.
+**
+**	Order for every profile:
+**	1 row with 3 number
+**		profile number				ip  [-]
+**		number of points			ny  [-]
+**		roughness					rb  [m]
+**  ny rows with 3 number
+**     level of each point			dp  [m]
+**     width at each point			bp  [m]
+**     wet perimeter at each point	op  [m]
+**
+**
+**	Enter the profile in increasing order!
+**
+**  profile 1
+**
+ 1 3 0.050
+ 0.00 0.000 0.0
+ 0.01 250.0 250.0
+ 10.0 250.0 250.0
+**
+**
+**  profile 2 - mu = 0.65
+**
+** 2 3 0.600
+** 0.00 0.0000 0.0
+** 0.01 102.60 102.60
+** 10.0 102.60 122.60
+2 3 0.100
+ 0.00 0.0000 0.0
+ 0.01 66.7 66.7
+ 10.0 66.7 86.7
+**
+**
+**  profile 3
+**
+ 3 3 0.600
+ 0.00 0.0000 0.0
+ 0.01 82.0  82.0
+ 10.0 82.0 102.0
+**
+**
+**  profile 4 - mu = 0.80
+**
+** 4 3 0.005
+** 0.00 0.000 0.0
+** 0.01 60.0 60.0
+** 7.15 60.0 131.5
+ 4 3 0.005
+ 0.00 0.000 0.0
+ 0.01 48.0 48.0
+ 7.15 48.0 119.5
+**
+**
+**  profile 5
+**
+ 5 4 0.005
+ 0.00 0.000 0.0
+ 0.01 60.0 60.0
+ 6.75 60.0 74.3
+ 6.76 0.00 187.5
+**
+**
+**  profile 6
+**
+ 6 3 0.005
+ 0.00 0.000 0.0
+ 0.01 68.0 68.0
+ 7.15 68.0 139.5 
+**
+**
+**  profile 7
+**
+ 7 3 0.60
+ 0.00 0.0000 0.0
+ 0.01 130.0 130.0
+ 15.0 130.0 130.0
+**
+**
+**  profile 8
+**
+ 8 3 0.050
+ 0.00 0.0000 0.0
+ 0.01 1000.0 1000.0
+ 15.0 1000.0 1000.0
