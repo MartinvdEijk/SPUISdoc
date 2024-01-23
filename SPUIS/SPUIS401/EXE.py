@@ -2,9 +2,10 @@
 import PyInstaller.__main__
 import os
 import glob
+import shutil
 
 # Input
-VERSION = 'V03'
+VERSION = 'V01'
 
 # Check
 if os.path.exists(os.getcwd()+'\\dist\\'+'SPUIS'+VERSION+'.exe'):
@@ -18,7 +19,8 @@ PyInstaller.__main__.run([
     '--contents-directory', VERSION,
     '-n', 'SPUIS'+VERSION
 ])
-files = glob.glob('/YOUR/PATH/*')
-for f in files:
-    os.remove(f)
-os.remove('SPUIS'+VERSION+'.spec')
+test = os.listdir(dir_name)
+for item in test:
+    if item.endswith(".spec") or item.endswith(".exe"):
+        os.remove(os.path.join(dir_name, item))
+shutil.copyfile('./dist/SPUIS'+VERSION+'.exe', 'SPUIS401.exe')
