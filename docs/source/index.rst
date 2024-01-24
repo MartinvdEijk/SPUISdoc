@@ -21,6 +21,7 @@ Inhoud
 --------
 
 .. toctree::
+
 	achtergrond
 	installatie
 	gebruik

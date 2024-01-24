@@ -17,7 +17,3 @@ De achtergronden, formules en opzet van de programma’s worden volledig gegeven
 [2]   Waterloopkundig Laboratorium, E.A. van Kleef. ‘Berekening van de afvoer van spuisluizen bij schietend water situaties.’ Rapport Q331-II, juli 1989.
 [3]   Waterloopkundig Laboratorium, A. Vrijburcht. ‘Aflaatwerk en gemaal te Oosterhout.’ Rapport Q1952, maart 1995
 
-.. autosummary::
-   :toctree: generated
-
-   lumache
