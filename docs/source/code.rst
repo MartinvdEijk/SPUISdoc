@@ -1,4 +1,4 @@
-Usage
+Voorbeelden
 =====
 
 .. _installation:

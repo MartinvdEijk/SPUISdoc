@@ -33,8 +33,7 @@ Hiervoor kan EXE.py gebruikt worden. Hierbij is het van belang om aan te geven i
 pip3 install pyInstaller
 </pre>
 
-Na het uitvoeren van EXE.py wordt er in de folder 'dist' de onafhankelijke executable gemaakt. Deze moet gekopieerd worden naast de SPUIS401.py file.
-De juiste naam van de executable moet ingevoerd worden in de "runSpuis.py" file wanneer de simulatie uitgevoerd moet worden.
+Na het uitvoeren van EXE.py wordt er in de folder 'dist' de onafhankelijke executable gemaakt. Deze wordt gekopieerd naast de SPUIS401.py file.
 
 ### *Documentatie* <br/>
 Documentatie van de code is te vinden "./docs" en is gemaakt met behulp van 'readthedocs'. Naast de uitleg in die in de code wordt beschreven, kan een gedetailleerde uitleg van de code gevonden worden op ....
