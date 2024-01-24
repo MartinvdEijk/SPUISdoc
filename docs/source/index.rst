@@ -1,3 +1,4 @@
+   
 Documentatie SPUIS
 ===================================
 
@@ -9,9 +10,9 @@ vrije waterspiegel aanwezig is, biedt SPUIS de mogelijkheid tot het doorrekenen 
 overgangen van stromend naar schietend water en andersom.  
 De broncode alsook een gecompileerde versie is beschikbaar.
 
-De documentatie is opgedeeld in meerde secties. Eerst wordt de achtergrond beschreven van het model in :doc: 'achtergrond'.
-Hierna wordt uitgelegd hoe het model geinstalleerd kan worden met de juiste benodigdheden in :doc: 'installatie'.
-Daaropvolgend wordt in :doc: 'gebruik' het gebruik van het model beschreven. In :doc: 'tests' een aantal voorbeelden wordt beschreven. In :doc: 'code' wordt de code gedetailleerd beschreven.
+De documentatie is opgedeeld in meerde secties. Eerst wordt de achtergrond beschreven van het model in :ref:`achtergrond`.
+Hierna wordt uitgelegd hoe het model geinstalleerd kan worden met de juiste benodigdheden in :ref:`installatie`.
+Daaropvolgend wordt in :ref:`gebruik` het gebruik van het model beschreven. In :ref:`code` wordt de code gedetailleerd beschreven.
 
 .. note::
 
@@ -21,10 +22,9 @@ Inhoud
 --------
 
 .. toctree::
-
+	
 	achtergrond
 	installatie
 	gebruik
-	tests
 	code
 
